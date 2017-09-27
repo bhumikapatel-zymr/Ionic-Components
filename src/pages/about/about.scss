@@ -1,0 +1,11 @@
+page-about {
+  .force-back-button .back-button {
+    display: inline-block;
+  }
+  ion-slides {
+  height: auto;
+}
+.scroll-content {
+   overflow-y: scroll !important;
+}
+}

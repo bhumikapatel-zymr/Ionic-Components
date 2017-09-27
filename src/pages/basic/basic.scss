@@ -1,0 +1,39 @@
+
+$SIDEMENU_TOP: #A23C4B;
+$SIDEMENU_BOTTOM: #ff9068;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.7);
+
+page-basic {
+
+
+  .item.item-trns {
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: bold;
+
+
+  }
+  .score
+  {
+    font-size: 200%;
+
+
+  }
+
+  .master
+  {
+        background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+        background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+
+  }
+
+  div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

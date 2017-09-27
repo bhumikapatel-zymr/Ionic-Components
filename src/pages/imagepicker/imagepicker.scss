@@ -1,0 +1,80 @@
+page-imagepicker {
+  .imagecircle {
+       height: 25%/2;
+       width: 25%/2;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px blue;
+      padding: 100%/2;
+      max-width: 100px !important;  //any size
+    max-height: 100px !important;
+
+  }
+  .rotate-90 {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.rowmargin
+{
+  margin-top: 10%;
+}
+.scroll-content {
+   overflow-y: scroll !important;
+}
+
+//bounce animation
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  25% {
+    -webkit-transform: translate3d(0,-30%,0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0,-30%,0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+.bounce-animation {
+  -webkit-animation: bounce ease-in 1;
+  animation: bounce ease-in 1;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+//slider animation
+@-webkit-keyframes slideInBothWays {
+  0% {
+    -webkit-transform: translate3d(-10%,0,0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(25%,0,0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+.slide-in-both-ways {
+   -webkit-animation: slideInBothWays ease-in 1;
+  animation: slideInBothWays ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+
+}

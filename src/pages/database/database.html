@@ -1,0 +1,83 @@
+<!--
+  Generated template for the DatabasePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      SQLITE
+    </ion-title>
+    <ion-buttons right>
+       <button ion-button outline (click)="onPush()">
+         <ion-icon name='refresh'></ion-icon>
+       </button>
+     </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="item.item-trns">
+  </div>
+<ion-list no-lines class="giveborder">
+  <ion-item>
+    <ion-label fixed>FirstName</ion-label>
+    <ion-input type="text" [(ngModel)]="firstname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>LastName</ion-label>
+    <ion-input type="text" [(ngModel)]="lastname"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-list radio-group no-lines class="giveborder" [(ngModel)]="gender">
+  <ion-item>
+    <ion-label>Male</ion-label>
+    <ion-radio value="male"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Female</ion-label>
+    <ion-radio value="female"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Other</ion-label>
+    <ion-radio value="other"></ion-radio>
+  </ion-item>
+
+</ion-list>
+<ion-list class="giveborder">
+  <ion-item>
+   <ion-label>Indian</ion-label>
+   <ion-toggle [(ngModel)]="Indian" (ionChange)="notify($event)"></ion-toggle>
+ </ion-item>
+</ion-list>
+<ion-list no-lines  class="giveborder">
+  <ion-item>
+    <label for="options">Hobbies :</label>
+        <div *ngFor="let cbItem of hobbies">
+          <label>
+            <input type="checkbox"
+                   name="options"
+                   value="{{cbItem}}"
+                   [checked]="hobbiesChecked.indexOf(cbItem) >= 0"
+                   (change)="updateCheckedOptions(cbItem, $event)"/>
+            {{cbItem}}
+          </label>
+        </div>
+      </ion-item>
+</ion-list>
+
+  <ion-list no-lines class="giveborder">
+  <ion-item>
+    <button ion-button  col-sm (click)="showCalendar()">Choose Birthdate</button>
+  </ion-item>
+
+<ion-item>
+    <ion-label text-right>{{this.birthdate}}</ion-label>
+  </ion-item>
+</ion-list>
+
+<button ion-button round (click)= "SubmitTapped(text)">Submit</button>
+</ion-content>

@@ -1,0 +1,35 @@
+<!--
+  Generated template for the LocalnotificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Notifications
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list class="item-divider">
+        <ion-item>
+          <ion-label>Notify me at: </ion-label>
+          <ion-datetime displayFormat="h:mm A" pickerFormat="h:mm A" [(ngModel)]="timeText" (ionChange)="timeChange($event)"></ion-datetime>
+        </ion-item>
+      <ion-item >
+        <textarea  #myInput id="myInput" rows="1"  placeholder="what to remind" maxLength="100" (keyup)="resize()"  [(ngModel)]="reminder">
+          </textarea>
+          </ion-item>
+        </ion-list>
+
+</ion-content>
+
+<ion-footer>
+
+    <button (click)="addNotifications()" ion-button color="primary" full>Schedule</button>
+    <button (click)="cancelAll()" ion-button color="danger" full>Leave me alone!</button>
+\\
+</ion-footer>

@@ -1,0 +1,47 @@
+
+
+  <ion-header>
+    <ion-navbar>
+      <ion-title>
+         HealthKit
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-item>
+      <ion-label stacked>Set Height</ion-label>
+      <ion-input type="text" [(ngModel)]="height" placeholder="My Height today (in cm)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Set Weight</ion-label>
+      <ion-input type="text" [(ngModel)]="weight" placeholder="My Weight today (in lb)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Current Height</ion-label>
+      <ion-input type="text" [(ngModel)]="currentHeight" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Current Weight</ion-label>
+      <ion-input type="text" [(ngModel)]="currentWeight" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Steps last 24h</ion-label>
+      <ion-input type="text" [(ngModel)]="stepcount" readonly></ion-input>
+    </ion-item>
+
+    <button ion-button full (click)="savedata()">Set Height</button>
+    <button ion-button full (click)="saveWorkout()">Set a Workout</button>
+
+    <ion-list>
+      <ion-card *ngFor="let workout of workouts">
+        <ion-card-header>{{ workout.calories }}</ion-card-header>
+        <ion-card-content>
+          <p>Activity: {{ workout.activityType }}</p>
+          <p>Duration: {{ workout.duration / 100 }} min</p>
+          <p>Date: {{ workout.startDate | date:'short' }}</p>
+          <p>Distance: {{ workout.miles }} miles</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-content>

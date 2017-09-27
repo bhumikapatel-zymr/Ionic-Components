@@ -1,0 +1,30 @@
+$SIDEMENU_TOP: #A23C4B;
+$SIDEMENU_BOTTOM: #ff9068;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.3);
+
+page-postapidata {
+  .item .item-input {
+    background-color: transparent;
+     }
+  ion-item:hover a {
+  background-color: slategray !important;
+}
+.customtextfield
+{
+  border-radius: 3px;
+  border-width: 2px;
+  border-color:  black;
+  border-left: 2px;
+  border-right: 2px;
+
+}
+.master
+{
+      background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+      background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+      background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+      background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+
+}
+
+}

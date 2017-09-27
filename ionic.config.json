@@ -1,0 +1,9 @@
+{
+  "name": "Ionic-Components",
+  "app_id": "9bc6d81f",
+  "type": "ionic-angular",
+  "watchPatterns": [],
+  "integrations": {
+    "cordova": {}
+  }
+}

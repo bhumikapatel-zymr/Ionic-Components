@@ -1,0 +1,16 @@
+page-passdata {
+  ion-grid{
+        ion-col{
+            padding: 0 !important;
+
+            ion-card{
+                    margin: 3px !important;
+                    width: calc(100% - 6px)  !important;
+
+                    ion-card-title{
+                        font-size: 15px !important;
+                    }
+            }
+        }
+    }
+}

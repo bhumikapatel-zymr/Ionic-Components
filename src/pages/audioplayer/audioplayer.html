@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Music List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let track of myTracks">
+      <ion-thumbnail item-left>
+        <img src="{{track.art}}">
+      </ion-thumbnail>
+      <h2>{{track.title}}</h2>
+      <button ion-button (click)="currentTrack = track">Play</button>
+      <button ion-button (click)="add(track)">Add</button>
+    </ion-item>
+  </ion-list>
+
+  <audio-track #audioTrack [track]="currentTrack" [autoplay]="true" (onFinish)="onTrackFinished($event)">
+    <div style="display: flex">
+      <button ion-button icon-only (click)="audioTrack.canPlay ? audioTrack.play() : next()"><ion-icon name="play"></ion-icon></button>
+      <button ion-button icon-only (click)="audioTrack.pause()"><ion-icon name="pause"></ion-icon></button>
+      <button ion-button icon-only (click)="next()"><ion-icon name="skip-forward"></ion-icon></button>
+      <audio-track-progress-bar duration progress [audioTrack]="audioTrack" style="width: 100%; margin: 0 10px"></audio-track-progress-bar>
+    </div>
+    <div style="display: flex; justify-content: center; height: 50px">
+      <div class="spin" *ngIf="audioTrack && audioTrack.hasLoaded"><em>{{ audioTrack?.title }}</em></div>
+      <ion-spinner color="primary" text-center name="crescent" center *ngIf="audioTrack && audioTrack.isLoading"></ion-spinner>
+    </div>
+  </audio-track>
+
+  <ion-list *ngIf="playlist.length > 0">
+    <ion-list-header no-lines inset>
+      PLAYLIST
+      <button ion-button clear item-right (click)="clear()">Clear</button>
+    </ion-list-header>
+    <ion-item *ngFor="let track of playlist; let i = index">
+      <h2>{{ track.title }}</h2>
+      <p>{{ track.artist }}</p>
+      <button ion-button icon-only item-end (click)="play(track, i)">
+          <ion-icon name="play"></ion-icon>
+        </button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+<!--<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of musicItems | async">
+      <ion-item>
+      <button ion-button full color="dark" (click)="startAudio(item.$value)">{{ item.$value }}</button>
+
+      </ion-item>
+    </ion-item-sliding>
+    <ion-item>
+      <iframe width="100%" height="315" [src]="videoUrl" frameborder="0" allowfullscreen>
+</iframe>
+</ion-item>
+  </ion-list>
+</ion-content>-->

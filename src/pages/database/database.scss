@@ -1,0 +1,27 @@
+page-database {
+  .list-md .item-block {
+    border-bottom: 1px solid $list-md-border-color;
+  }
+  .list-md .item-block .item-inner {
+    border-bottom: 0;
+  }
+  .item { border-style: none }
+
+  .giveborder
+  {
+    border: 1px solid;
+    border-top-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-color: black;
+    background-color: transparent;
+	  background-color: rgba(0, 0, 0, 0);
+	  color: white
+  }
+  .item.item-trns {
+    background-color: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    height: 100%
+}
+
+}

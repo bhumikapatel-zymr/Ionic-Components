@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ImagepickerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>imagepicker</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-row class=" rowmargin slide-in-both-ways">
+      <ion-col>
+      <div text-center>
+      <img class= "imagecircle " src="img/gallery.png"/>
+    </div>
+  </ion-col>
+  </ion-row>
+  <ion-row class=" slide-in-both-ways">
+        <ion-col>
+        <div text-center>
+        <button ion-button color="positive" (click)="accessGallery()">Open Gallery</button>
+      </div>
+    </ion-col>
+    </ion-row>
+      <ion-row class="rowmargin slide-in-both-ways">
+        <ion-col>
+        <div text-center>
+        <img class= "imagecircle" src="img/camera.jpeg"/>
+      </div>
+    </ion-col>
+    </ion-row>
+    <ion-row class=" slide-in-both-ways">
+          <ion-col>
+          <div text-center>
+          <button ion-button color="positive" (click)="accessCamera()">Open Camera</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <img [src]="base64Image" *ngIf="base64Image" />
+    </ion-row>
+</ion-content>

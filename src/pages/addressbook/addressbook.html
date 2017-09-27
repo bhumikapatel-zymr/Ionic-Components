@@ -1,0 +1,28 @@
+<!--
+  Generated template for the AddressbookPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addressbook</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+  <ion-content padding>
+      <ion-list>
+        <span *ngFor="let contact of contactlist" >
+          <ion-item *ngIf="contact.phoneNumbers[0].value" (click)="call($event, contact)">
+    <ion-avatar item-start>
+      <img src="img/ContactUS.png">
+    </ion-avatar>
+    <h2>{{contact.name.givenName}}</h2>
+    <p>{{contact.phoneNumbers[0].value}}</p>
+  </ion-item>
+</span>
+</ion-list>
+  </ion-content>

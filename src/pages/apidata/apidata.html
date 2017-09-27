@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     GET/POST API
+   </ion-title>
+   <ion-buttons right>
+      <button ion-button outline (click)="onPush()">
+      PushAPI
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+<ion-row>
+<ion-col col-3>
+  <div class="imgcenter">
+  <img class = "image" src={{this.strimage}}/>
+</div>
+</ion-col>
+  <ion-col col-9>
+  <ion-list no-lines text-wrap>
+    <ion-item class= "itemheight">
+    <ion-avatar item-start>
+      <img  class = "full-image" src = "assets/pin.jpg"/>
+    </ion-avatar>
+    <h2 class="col-xs-4 col-sm-4 menu1">{{this.strfirstname}} {{this.strlastname}}</h2>
+    </ion-item>
+    <ion-item class= "itemheight">
+    <ion-avatar item-start>
+      <img  class = "full-image" src = "assets/phn.jpg"/>
+    </ion-avatar>
+    <h2 class="col-xs-4 col-sm-4 menu1">{{this.stremail}}</h2>
+    </ion-item>
+    <ion-item class= "itemheight">
+    <ion-avatar item-start>
+      <img  class = "full-image" src = "assets/gender1600.png"/>
+    </ion-avatar>
+    <h2 class="col-xs-4 col-sm-4 menu1">{{this.strgender}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-col>
+</ion-row>
+<ion-row padding-box class ="backgroundcolor">
+  <ion-label class="text-center style">Photos</ion-label>
+</ion-row>
+</ion-header>
+<!--<ion-col col-1>
+  <ion-row >
+</ion-col>
+
+  <img  class = "full-image" src = "assets/pin.jpg"/>
+</ion-row>
+  <ion-row>
+    <img  class = "full-image" src = "assets/phn.jpg"/>
+  </ion-row>
+  <ion-row>
+    <img  class = "full-image" src = "assets/gender1600.png"/>
+  </ion-row>
+</ion-col>
+<ion-col col-7>
+<ion-row  class="col-xs-4 col-sm-4 menu1">
+  <ion-label class ="">{{this.strfirstname}} {{this.strlastname}}</ion-label>
+</ion-row>
+<ion-row>
+</ion-row>
+<ion-row  class="col-xs-4 col-sm-4 menu1">
+  <ion-label >{{this.stremail}}</ion-label>
+</ion-row >
+<ion-row  class="col-xs-4 col-sm-4 menu1">
+  <ion-label >{{this.strgender}}</ion-label>
+</ion-row >
+</ion-col>
+</ion-row>
+<ion-row padding-box class ="backgroundcolor">
+  <ion-label class="text-center style">Photos</ion-label>
+</ion-row>-->
+
+
+<ion-content>
+<div class = " lost list-inset list1">
+   <div class = "item">  <img  src= "assets/img1.jpg"/></div>
+   <div class = "item"><img  src= "assets/img2.jpg"/></div>
+   <div class = "item"><img  src= "assets/img3.jpg"/></div>
+</div>
+</ion-content>
